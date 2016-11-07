@@ -169,7 +169,7 @@
     "iso_checksum": "DD7231B378F23E2E846AC78B0C5D8974A23631D5",
     "iso_checksum_type": "sha1",
     "iso_name": "OracleLinux-R6-U7-Server-x86_64-dvd.iso",
-    "ks_path": "centos-6.7/ks.cfg",
+    "ks_path": "centos-6.8/ks.cfg",
     "memory": "512",
     "metadata": "floppy/dummy_metadata.json",
     "mirror": "http://webdav.l.postgrespro.ru/DIST/",
