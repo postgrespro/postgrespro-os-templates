@@ -1,0 +1,10 @@
+DEFAULT astra
+
+LABEL astra
+  kernel linux
+  append initrd=initrd.gz debian-installer/locale=ru_RU
+  console-keymaps-at/keymap=ru hostname=<host-имя которое будет назначено целевому компьютеру>
+  domain=<имя домена> url=ftp://<IP-адрес_сервера>/tftp/preseed.cfg
+  interface=auto netcfg/dhcp_timeout=60
+
+TIMEOUT 1
