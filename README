@@ -1,0 +1,48 @@
+### Создание шаблонов виртуальных машин
+
+Для экономии времени на создание тестового окружения перед запуском теста мы
+используем заранее подготовленные шаблоны ВМ для QEMU. Такие шаблоны удобно создавать с
+помощью инструмента Packer. Чтобы создать шаблон нужно:
+
+- [установить Packer](https://www.packer.io/intro/getting-started/setup.html)
+- установить QEMU
+- запустить команду создания шаблона: ```$ packer build -only=qemu centos-7.0.json```
+
+См. также [готовые шаблоны Packer](https://github.com/chef/bento/) для самых популярных ОС.
+
+Проверить конфиг на правильность:
+
+- Debian-based: debconf-set-selections -c preseed.cfg
+- RPM-based: ksvalidator, which is part of the pykickstart package
+
+### Астра:
+
+* https://github.com/laboratory50/astra_preseed_install
+* На DVD-диске с дистрибутивом ОС в каталоге /netinst находится пример такого файла с комментариями — /example-preseed.cfg.
+* /var/cache/debconf/config.dat
+* /var/log/installer/cdebconf/questions.dat 
+* http://lab50.net/auto_install_astra_linux_part1/
+* http://astra-linux.com/wiki/index.php/Network_Install
+* https://www.debian.org/releases/stable/amd64/apbs03.html.en
+
+### АльтЛинукс
+
+* https://github.com/yoctocloud/packer-altlinux
+* https://github.com/sergelogvinov/alterator-postinstall
+* https://www.altlinux.org/NetInstall
+* https://www.altlinux.org/Autoinstall
+
+### РОСА Линукс
+
+* https://proprius-infernum.blogspot.ru/2014/04/rosa-desktop-foreman.html
+* http://forum.rosalab.ru/ru/viewtopic.php?f=40&t=4609
+* http://www.techdiving.pro/2015/10/rels-6x.html
+
+### TODO
+
+* Windows
+* GosLinux
+
+* https://github.com/jakobadam/packer-qemu-templates
+* https://github.com/TelekomLabs/packer-rhel
+* https://github.com/joefitzgerald/packer-windows
