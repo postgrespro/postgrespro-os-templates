@@ -11,7 +11,7 @@ before_script:
   - ~/bin/packer -v || true
 
 script:
-  - cd "${TRAVIS_BUILD_DIR}/" && find . -depth 1 -name "*.json" -exec packer validate {} \;
+  - cd "${TRAVIS_BUILD_DIR}/" && find . -name '*.json' -exec packer validate {} \;
 
 notification:
   email:
